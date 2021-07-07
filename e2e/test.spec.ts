@@ -8,4 +8,9 @@ test('basic test', async ({ page }) => {
 
   await page.click('text=Add');
   expect(await page.textContent('text=This is page #1')).toBeTruthy();
+  await page.click('text=Add');
+  expect(await page.textContent('text=This is page #2')).toBeTruthy();
+
+  await page.click('text=Remove');
+  expect(await page.textContent('text=This is page #0')).toBeTruthy();
 });
