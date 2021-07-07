@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
 
 @Component({
@@ -8,14 +9,17 @@ import { map, take } from 'rxjs/operators';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  pageNumber$: Observable<number> = this.activatedRoute.queryParams.pipe(
+    map((param) => Number(param.page) || 0)
+  );
+
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
   ) { }
 
   addQueryParam() {
-    this.activatedRoute.queryParams.pipe(
-      map((param) => Number(param.page) || 0),
+    this.pageNumber$.pipe(
       take(1),
     ).subscribe((pageCount) => {
       this.router.navigate([], {
