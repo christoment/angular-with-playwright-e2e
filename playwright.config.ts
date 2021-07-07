@@ -2,7 +2,6 @@ import { PlaywrightTestConfig } from '@playwright/test';
 const config: PlaywrightTestConfig = {
   use: {
     // Browser options
-    browserName: 'webkit',
     // slowMo: 500, // Add this to make e2e test run slower to inspect
     // headless: false,
 
