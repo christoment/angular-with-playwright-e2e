@@ -7,8 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "e2e:install": "npx playwright install-deps webkit",
-    "e2e:run": "npx playwright install"
+    "e2e:install": "npx playwright install",
+    "e2e:run": "npx playwright test"
   },
   "private": true,
   "dependencies": {
