@@ -1,7 +1,8 @@
 import { test, expect } from '@playwright/test';
+import { gotoRootUrl } from './utils/helper';
 
 test('basic test', async ({ page }) => {
-  await page.goto('http://localhost:4200');
+  await gotoRootUrl(page);
   const url = await page.url();
   expect(url).toMatch(new RegExp(`.*/home`));
   expect(await page.textContent('text=This is page #0')).toBeTruthy();
