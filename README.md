@@ -1,5 +1,22 @@
-# How to run Playwright
-1. Do `npm install`
-2. Do `npm run e2e:install` to install Playwright dependencies.
-3. Do `npm run start` to start the development server.
-3. Do `npm run e2e:run` to run Playwright test
+# E2E BDD Testing with Cucumber and Playwright on Angular
+
+## How to run E2E Testing
+
+### Prerequisite
+1. Node v14.16.1 (or 14 LTS)
+
+
+### Prebuild
+```bash
+npm install
+```
+
+
+### Running tests
+```bash
+# Start the Angular local server
+npm run start
+
+# Run the Cucumber test
+npm run e2e
+```
