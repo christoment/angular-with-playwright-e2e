@@ -1,5 +1,5 @@
 import { ICustomWorld } from './custom-world';
-import { Before, After, BeforeAll, AfterAll, Status, setDefaultTimeout } from '@cucumber/cucumber';
+import { Before, After, BeforeAll, AfterAll, Status, setDefaultTimeout, ITestCaseHookParameter } from '@cucumber/cucumber';
 import {
   chromium,
   ChromiumBrowser,
@@ -9,7 +9,6 @@ import {
   webkit,
   WebKitBrowser,
 } from 'playwright';
-import { ITestCaseHookParameter } from '@cucumber/cucumber/lib/support_code_library_builder/types';
 
 // eslint-disable-next-line no-var
 var browser: ChromiumBrowser | FirefoxBrowser | WebKitBrowser;

@@ -7,9 +7,7 @@ let common = [
 ].join(' ');
 
 const getWorldParams = () => {
-  const params = {
-    foo: 'bar',
-  };
+  const params = {};
 
   return `--world-parameters ${JSON.stringify({ params })}`;
 };
